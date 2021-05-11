@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/t3-integracion-flights-app/static/css/main.14469159.chunk.css",
+    "main.js": "/t3-integracion-flights-app/static/js/main.bcf2c914.chunk.js",
+    "main.js.map": "/t3-integracion-flights-app/static/js/main.bcf2c914.chunk.js.map",
+    "runtime-main.js": "/t3-integracion-flights-app/static/js/runtime-main.2564ad46.js",
+    "runtime-main.js.map": "/t3-integracion-flights-app/static/js/runtime-main.2564ad46.js.map",
+    "static/js/2.3a833f69.chunk.js": "/t3-integracion-flights-app/static/js/2.3a833f69.chunk.js",
+    "static/js/2.3a833f69.chunk.js.map": "/t3-integracion-flights-app/static/js/2.3a833f69.chunk.js.map",
+    "static/js/3.93de4fa7.chunk.js": "/t3-integracion-flights-app/static/js/3.93de4fa7.chunk.js",
+    "static/js/3.93de4fa7.chunk.js.map": "/t3-integracion-flights-app/static/js/3.93de4fa7.chunk.js.map",
+    "index.html": "/t3-integracion-flights-app/index.html",
+    "static/css/main.14469159.chunk.css.map": "/t3-integracion-flights-app/static/css/main.14469159.chunk.css.map",
+    "static/js/2.3a833f69.chunk.js.LICENSE.txt": "/t3-integracion-flights-app/static/js/2.3a833f69.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/t3-integracion-flights-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2564ad46.js",
+    "static/js/2.3a833f69.chunk.js",
+    "static/css/main.14469159.chunk.css",
+    "static/js/main.bcf2c914.chunk.js"
+  ]
+}
