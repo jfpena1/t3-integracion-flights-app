@@ -1,6 +1,7 @@
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import '../App.css';
+import {SocketContext} from '../context/socket.js'
 
 function Map() {
     return (
