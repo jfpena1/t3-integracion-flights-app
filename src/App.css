@@ -38,8 +38,48 @@
 }
 
 .leaflet-container {
-  width: 100%;
-  height: 100vh;
+  margin: 2%;
+  width: 80%;
+  height: 80vh;
 }
 
 .mapid { height: 800px; }
+
+.planeInfo {
+  float:center;
+  width: 80%;
+  height: 100%;
+  background:whitesmoke;
+  border:3px solid black;
+  box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);  
+  font-style: italic ;
+  padding: 2% 2%;
+  
+}
+
+.singlePlainInfo {
+  width: 25%;
+  height: 5%;
+  background: white;
+  border:3px black;
+  background: -webkit-linear-gradient(130deg, #2f3a36 0%, #22302a 100%, #000000 90%);
+  background: -moz-linear-gradient(130deg,#2f3a36 0%, #32463e 100%, #000000 90%);
+  background: -o-linear-gradient(130deg, #2f3a36 0%,#32463e 100%, #000000 90%);
+  background: linear-gradient(130deg, #2f3a36 0%,#32463e 100%, #000000 90%);
+  box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);
+  color: white ;
+  padding:1% 1%;
+  margin: 0.5% 0.5%;
+}
+
+.chatContainer {
+  float:right;
+  width: 20%;
+  height: 100%;
+  background:whitesmoke;
+  border:3px solid black;
+  box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);  
+  font-style: italic ;
+  padding: 2% 2%;
+  
+}
