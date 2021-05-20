@@ -105,9 +105,6 @@ function App() {
           />
           <ProfileNameInput handleUsernameChange={handleUsernameChange}/> 
         </div>
-        <div id="mapid"  style={{float:"left"}}>
-          <Map planesInfo={planesInfo} pathColors={pathColors}/>
-        </div>
       </div>
       <div className="planeInfo" style={{float:"left", width:"60%"}}> 
         <Button 
