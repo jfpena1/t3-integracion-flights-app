@@ -1,5 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react'
-import { MapContainer, TileLayer, Polyline } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 import '../App.css';
 import {SocketContext} from '../context/socket.js'
 import Plane from "./Plane"
@@ -27,7 +27,7 @@ function Map(props) {
             }
         });
         setFlights(prevState => {
-            if (prevState.includes(planeCode) == true) {
+            if (prevState.includes(planeCode)) {
                 return prevState
             }
             else{
@@ -38,7 +38,7 @@ function Map(props) {
                 return newState
             }     
         });
-      };
+    };
 
     useEffect(() => {
         // as soon as the component is mounted, do the following tasks:
@@ -87,7 +87,8 @@ function Map(props) {
             }
             {props.planesInfo.length > 0 ? 
                 props.planesInfo.map((info, i) =>
-                    <Path 
+                    <Path
+                        key={i} 
                         color={props.pathColors[i]} 
                         positions={[info.origin, info.destination]}
                         type={"straight"}
@@ -99,7 +100,8 @@ function Map(props) {
 
             {Object.keys(planePositions).length > 0 ? 
                 Object.keys(planePositions).map((planecode, i) =>
-                    <Path 
+                    <Path
+                        key={i} 
                         color={"black"}
                         positions={planePositions[planecode]}
                         type={"curved"}

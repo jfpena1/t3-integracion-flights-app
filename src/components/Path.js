@@ -3,7 +3,7 @@ import {Polyline, Tooltip, Marker} from 'react-leaflet'
 import L from 'leaflet'
 
 function Path(props) {
-    console.log(props.type)
+    // console.log(props.type)
     const originTitle = props.type === "straight" ? 'origen ' + 
         props.planeCode.toString() + " :" + 
         props.positions[0].toString() 
@@ -27,8 +27,6 @@ function Path(props) {
                     position={props.positions[0]}
                     title= {originTitle}
                     icon={iconStart} 
-                    
-
                 />
                 : 
                 null

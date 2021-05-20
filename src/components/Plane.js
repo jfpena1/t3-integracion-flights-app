@@ -9,14 +9,18 @@ var planeIcon = L.icon({
     iconSize:     [35, 40], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
     iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    shadowAnchor: [0, 0],  // the same for the shadow
+    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
 
 function Plane(props) {
-    console.log(props)
+    console.log(props.planeCode)
+    console.log(props.position)
     return (
-        <Marker position={props.position} icon={planeIcon}>
+        <Marker 
+        position={props.position} 
+        icon={planeIcon}
+       >
             <Tooltip>{props.planeCode} </Tooltip>
         </Marker > 
     )

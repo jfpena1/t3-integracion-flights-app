@@ -12,9 +12,12 @@ function FlightInfo(props) {
                 <li> avion: {props.plane}</li>
                 <li> asientos: {props.seats}</li>
                 {props.passengers.map((pas, index) => {
-                    <p> nombre: {pas["name"]}, 
-                        edad: {pas["age"]}
-                    </p>  
+                    return (
+                        <p> nombre: {pas["name"]}, 
+                            edad: {pas["age"]}
+                        </p> 
+                    )
+                     
                 })}
             </ul>
         </div>
