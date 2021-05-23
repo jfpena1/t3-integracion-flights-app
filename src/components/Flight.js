@@ -26,7 +26,7 @@ function Flight(props) {
         })
     }, [actualPosition])
 
-    console.log(props)
+    // console.log(props)
     return (
         <div>
             <Plane position={actualPosition}/>
