@@ -50,8 +50,8 @@ const colorEnd = 'red'
 
 const markerHtmlStylesStart = `
   background-color: ${colorStart};
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   display: block;
   left: 0rem;
   top: 0rem;
@@ -62,16 +62,16 @@ const markerHtmlStylesStart = `
 
 const iconStart = L.divIcon({
   className: "",
-  iconAnchor: [0, 24],
-  labelAnchor: [-6, 0],
-  popupAnchor: [0, -36],
+  iconAnchor: [0, 0],
+  labelAnchor: [0, 0],
+  popupAnchor: [0, 0],
   html: `<span style="${markerHtmlStylesStart}" />`
 })
 
 const markerHtmlStylesEnd = `
   background-color: ${colorEnd};
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   display: block;
   left: 0rem;
   top: 0rem;
@@ -82,7 +82,7 @@ const markerHtmlStylesEnd = `
 
 const iconEnd = L.divIcon({
   className: "",
-  iconAnchor: [0, 24],
+  iconAnchor: [0, 10],
   labelAnchor: [-6, 0],
   popupAnchor: [0, -36],
   html: `<span style="${markerHtmlStylesEnd}" />`

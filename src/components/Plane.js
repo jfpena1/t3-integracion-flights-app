@@ -14,8 +14,7 @@ var planeIcon = L.icon({
 });
 
 function Plane(props) {
-    console.log(props.planeCode)
-    console.log(props.position)
+    
     return (
         <Marker 
         position={props.position} 
