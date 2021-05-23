@@ -57,14 +57,14 @@ function App() {
   const handlePlanesInfo = (data) => {
     console.log(data)
     setPlanesInfo(data);
-    if (numberOfPlanes !== planesInfo.length) {
+    if (numberOfPlanes != planesInfo.length) {
       console.log("cambiando n de aviones")
       setNumberOfPlanes(planesInfo.length)
     }
   };
 
   const handleChatReceived= (msg) => {
-    // if (msg.name == username) {return}
+    if (msg.name === username) {return}
     // emit CHAT event
     setChatList(prevState => {
       var newState = prevState.concat([msg])
@@ -84,15 +84,20 @@ function App() {
   const handleUsernameChange = (e) => {
     var target = e.target
     var newName= target.value
-    // console.log("previous user")
-    // console.log(username)
     setUsername(newName)
-    // console.log("cambiando user!")
-    // console.log(username)
+    return username
   };
 
   return (
     <SocketContext.Provider value={socket}>
+      <Button 
+          variant="outlined" 
+          color="primary"
+          onClick={updateFlights}
+          float="left"
+          >
+          Get Planes Info!
+      </Button>
       <div id="mapid">
           <Map planesInfo={planesInfo} pathColors={pathColors}/>
       </div>
@@ -102,17 +107,13 @@ function App() {
           style={{float:"right", width:"20%"}}
           chatList={chatList}
           handleChatEmitted={handleChatEmitted}
+          username={username}
           />
+          <br/>
           <ProfileNameInput handleUsernameChange={handleUsernameChange}/> 
         </div>
       </div>
       <div className="planeInfo" style={{float:"left", width:"60%"}}> 
-        <Button 
-          variant="outlined" 
-          color="primary"
-          onClick={updateFlights}>
-          Get Planes Info!
-        </Button>
         {planesInfo.length > 0 ? 
           planesInfo.map((data, i) => 
             <FlightInfo

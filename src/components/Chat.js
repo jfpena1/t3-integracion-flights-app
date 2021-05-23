@@ -4,12 +4,15 @@ import {ChatController, MuiChat} from "chat-ui-react"
 
 function Chat(props) {
     const [chatCtl] = useState(new ChatController());
+    const messagesEndRef = React.createRef()
     
     async function addNewMessage(msg) {
         if (msg) {
+            if(msg.name === props.username) {return}
             await chatCtl.addMessage({
                 type: 'text',
-                content: msg.name + ": " + msg.message + "\n" + Date(msg.date),
+                content: "user: " + msg.name + "\nmensaje: " + 
+                msg.message + "\nFecha: " + Date(msg.date).toLocaleString('es-CL'),
                 self: false,
               });
         }     
@@ -18,7 +21,12 @@ function Chat(props) {
     useEffect(() => {
         var lastOne = props.chatList.length - 1 
         addNewMessage(props.chatList[lastOne])
+        scrollToBottom()
     }, [props.chatList])
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
   
     useMemo(async () => {
         // Chat content is displayed using ChatController

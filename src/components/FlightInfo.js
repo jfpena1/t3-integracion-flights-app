@@ -11,6 +11,7 @@ function FlightInfo(props) {
                 <li> destino: {props.destination[0]}, {props.destination[1]}</li>
                 <li> avion: {props.plane}</li>
                 <li> asientos: {props.seats}</li>
+                <li> pasajeros:</li>
                 {props.passengers.map((pas, index) => {
                     return (
                         <p> nombre: {pas["name"]}, 
